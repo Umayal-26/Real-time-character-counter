@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Character Counter</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--Heading-->
+        <h1>Real-time Character Counter</h1>
+        <!--Text Container-->
+        <textarea id="Input" rows="5" cols="30" placeholder="Please write your text here..."></textarea>
+        <!--Toatal and Remaining-->
+        <div class="para">
+            <p>Total Characters: <span id="charCount">0</span></p>
+            <p>Remaining: <span id="Count">50</span></p>
+        </div>
+    </div>
+    <!--script starts-->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const Input = document.getElementById('Input');
+            const charCount = document.getElementById('charCount');
+
+            Input.addEventListener('input', () => {
+                charCount.textContent = Input.value.length;
+            });
+
+            Input.addEventListener('input', () => {
+                Count.textContent = 50 - Input.value.length;
+
+            });
+        });
+    </script>
+    <!--Script Ends-->
+</body>
+
+</html>
